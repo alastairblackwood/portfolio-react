@@ -7,13 +7,7 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react";
-import {
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaTwitter,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { ReactNode } from "react";
 
 const SocialButton = ({
@@ -64,10 +58,16 @@ export default function SmallWithSocial() {
         align={{ base: "center", md: "center" }}
       >
         <Stack direction={"row"} spacing={10} mb={4}>
-          <SocialButton label={"GitHub"} href={"#"}>
+          <SocialButton
+            label={"GitHub"}
+            href={"https://github.com/alastairblackwood"}
+          >
             <FaGithub />
           </SocialButton>
-          <SocialButton label={"LinkedIn"} href={"#"}>
+          <SocialButton
+            label={"LinkedIn"}
+            href={"https://www.linkedin.com/in/alastair-blackwood-1262888a/"}
+          >
             <FaLinkedin />
           </SocialButton>
           <SocialButton label={"Twitter"} href={"#"}>
