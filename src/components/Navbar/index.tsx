@@ -1,5 +1,4 @@
 import { Box, Flex, Heading, Link } from "@chakra-ui/react";
-import React from "react";
 import { ColorModeSwitcher } from "../../ColorModeSwitcher";
 
 const Navbar = () => {
