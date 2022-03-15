@@ -5,19 +5,16 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { ContactCard } from "../../containers/Card";
 import { ContactDescription } from "../../containers/Card/Contact/ContactDescription";
+import ContactForm from "../../components/Forms";
 
 export const Contact = () => (
   <Box textAlign="center" fontSize="xl">
     <Navbar />
     <Grid minH="100vh" p={3}>
       <VStack spacing={8}>
-        <ContactCard>
-          <ContactDescription
-            name={"DAO App"}
-            role={`alastair.blackwood@icloud.com`}
-            description={"0405 792 855"}
-          />
-        </ContactCard>
+        <Box mt={20}>
+          <ContactForm />
+        </Box>
         <Heading>Alastair Blackwood</Heading>
       </VStack>
       <Footer />

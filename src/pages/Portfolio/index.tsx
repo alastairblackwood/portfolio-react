@@ -11,6 +11,7 @@ export const Portfolio = () => (
     <Navbar />
     <Grid minH="100vh" p={3}>
       <VStack spacing={8}>
+        <Heading>Portfolio</Heading>
         <Link href="https://github.com/alastairblackwood/dao-app">
           <PortfolioCard>
             <PortfolioDescription
@@ -52,7 +53,6 @@ https://guarded-fortress-44138.herokuapp.com"
             ></PortfolioDescription>
           </PortfolioCard>
         </Link>
-        <Heading>Alastair Blackwood</Heading>
       </VStack>
       <SmallWithSocial />
     </Grid>

@@ -70,7 +70,7 @@ export const ContactCard = (props: ICardProps) => {
 
   return (
     <Flex>
-      <Box w="400px" height="389px" __css={styles} {...rest}>
+      <Box mt={10} w="400px" height="389px" __css={styles} {...rest}>
         {props.children}
       </Box>
     </Flex>
