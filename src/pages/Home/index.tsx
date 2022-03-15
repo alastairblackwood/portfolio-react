@@ -2,11 +2,10 @@ import * as React from "react";
 import { Box, Text, Link, VStack, Code, Grid, Heading } from "@chakra-ui/react";
 import { Logo } from "../../containers/Logo/Logo";
 import Navbar from "../../components/Navbar";
-import SmallWithSocial from "../../components/Footer";
 import Footer from "../../components/Footer";
 
 export const Home = () => (
-  <Box textAlign="center" fontSize="xl">
+  <Box textAlign="center" fontSize="xl" position="relative">
     <Navbar />
     <Grid minH="100vh" maxW="1200px" margin="0 auto" w="100%" p={3}>
       <VStack spacing={2}>
@@ -15,7 +14,7 @@ export const Home = () => (
         <Heading>Alastair Blackwood</Heading>
         <Text as="h6">Junior FullStack Developer</Text>
       </VStack>
-      <Footer />
     </Grid>
+    <Footer />
   </Box>
 );

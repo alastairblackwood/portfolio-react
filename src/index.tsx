@@ -6,7 +6,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import * as serviceWorker from "./serviceWorker";
-import theme from "../src/theme/Theme";
+import theme from "./theme/Theme";
 
 ReactDOM.render(
   <ChakraProvider theme={theme}>
