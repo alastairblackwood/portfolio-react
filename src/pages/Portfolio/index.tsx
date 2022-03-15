@@ -9,7 +9,7 @@ import { PortfolioDescription } from "../../containers/Card/Portfolio/PortfolioD
 export const Portfolio = () => (
   <Box textAlign="center" fontSize="xl">
     <Navbar />
-    <Grid minH="100vh" p={3}>
+    <Grid minH="100vh" maxW="1200px" margin="0 auto" w="100%" p={3}>
       <VStack spacing={8}>
         <Heading color="yellow.300">Portfolio</Heading>
         <Link href="https://github.com/alastairblackwood/dao-app">

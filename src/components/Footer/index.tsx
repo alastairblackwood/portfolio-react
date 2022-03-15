@@ -59,16 +59,16 @@ export default function Footer() {
             label="GitHub"
             href={"https://github.com/alastairblackwood"}
           >
-            <FaGithub size={"xl"} />
+            <FaGithub size="50px" />
           </SocialButton>
           <SocialButton
             label="LinkedIn"
             href={"https://www.linkedin.com/in/alastair-blackwood-1262888a/"}
           >
-            <FaLinkedin size={"xl"} />
+            <FaLinkedin size="50px" />
           </SocialButton>
           <SocialButton label={"Twitter"} href={"#"}>
-            <FaTwitter size={"xl"} />
+            <FaTwitter size="50px" />
           </SocialButton>
         </Stack>
         <Text color="yellow.300" fontSize="sm" fontWeight="semibold">
@@ -78,3 +78,9 @@ export default function Footer() {
     </Box>
   );
 }
+
+// for the footer, you need a container that contains the nav div and body div, and have that container to have a height of 100vh - the height of navbar. so that it pushes the footer down to the bottom.
+
+// for the width of the page, say pageContainer Flex, have it width=100% , maxW='1200px', margin='0 auto'. so that it stays in the middle even the screen is super wide
+
+// for breakpoint, create a enum for the screen sizes, then in chakra theme.ts, add in the breakpoints.

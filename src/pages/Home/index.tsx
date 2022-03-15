@@ -8,7 +8,7 @@ import Footer from "../../components/Footer";
 export const Home = () => (
   <Box textAlign="center" fontSize="xl">
     <Navbar />
-    <Grid minH="100vh" p={3}>
+    <Grid minH="100vh" maxW="1200px" margin="0 auto" w="100%" p={3}>
       <VStack spacing={2}>
         <Logo h="60vmin" pointerEvents="none" mt={20} mb={4} />
 
