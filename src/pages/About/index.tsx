@@ -15,7 +15,7 @@ export const About = ({ children }: AboutProps) => {
     <Box textAlign="center" fontSize="xl">
       <Navbar />
       <Grid minH="100vh" maxW="1200px" margin="0 auto" w="100%" p={3}>
-        <VStack>
+        <VStack mt={4}>
           <AboutCard>
             <AboutDescription
               name={""}
@@ -28,8 +28,8 @@ export const About = ({ children }: AboutProps) => {
           <Heading>Alastair Blackwood</Heading>
           <Text as="h6">Junior FullStack Developer</Text>
         </VStack>
-        <Footer />
       </Grid>
+      <Footer />
     </Box>
   );
 };

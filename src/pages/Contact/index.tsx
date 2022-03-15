@@ -19,7 +19,7 @@ export const Contact = () => (
         <Heading>Alastair Blackwood</Heading>
         <Text as="h6">Junior FullStack Developer</Text>
       </VStack>
-      <Footer />
     </Grid>
+    <Footer />
   </Box>
 );

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import {
   Button,
+  Flex,
   FormControl,
   FormLabel,
   Heading,
@@ -21,21 +22,23 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <FormControl isRequired>
-        <FormLabel htmlFor="email" color="yellow.300" fontWeight="semibold">
-          Email
-        </FormLabel>
-        <Input id="email" type="email" />
-        <FormLabel htmlFor="message" color="yellow.300" fontWeight="semibold">
-          Message
-        </FormLabel>
-        <Input id="text" type="text" h={40} />
-        <Button type="submit" mt={4} mb={4}>
-          Send
-        </Button>
-      </FormControl>
-    </form>
+    <Flex mt={24}>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <FormControl isRequired>
+          <FormLabel htmlFor="email" color="yellow.300" fontWeight="semibold">
+            Email
+          </FormLabel>
+          <Input id="email" type="email" />
+          <FormLabel htmlFor="message" color="yellow.300" fontWeight="semibold">
+            Message
+          </FormLabel>
+          <Input id="text" type="text" h={40} />
+          <Button type="submit" mt={4} mb={4}>
+            Send
+          </Button>
+        </FormControl>
+      </form>
+    </Flex>
   );
 };
 
