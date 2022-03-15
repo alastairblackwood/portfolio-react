@@ -74,7 +74,7 @@ const Navbar = () => {
         mt={5}
         ml={2}
         pr={8}
-        bg="black"
+        bg="gray.900"
         opacity={0.9}
         rounded="lg"
         zIndex={20}
