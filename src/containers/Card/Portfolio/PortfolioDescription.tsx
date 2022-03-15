@@ -20,7 +20,12 @@ export const PortfolioDescription = (props: ICommentProps) => {
   return (
     <Box className="about" p={4}>
       <Stack>
-        <Text textTransform="uppercase" fontSize="sm" color="white.500">
+        <Text
+          textTransform="uppercase"
+          fontSize="sm"
+          fontWeight="semibold"
+          color="yellow.300"
+        >
           {props.name}
         </Text>
         <Spacer />

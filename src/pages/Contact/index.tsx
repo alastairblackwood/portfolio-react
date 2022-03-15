@@ -11,11 +11,13 @@ export const Contact = () => (
   <Box textAlign="center" fontSize="xl">
     <Navbar />
     <Grid minH="100vh" p={3}>
-      <VStack spacing={8}>
-        <Box mt={20}>
+      <VStack spacing={2}>
+        <Heading size="md" textTransform="capitalize"></Heading>
+        <Box mt={10}>
           <ContactForm />
         </Box>
         <Heading>Alastair Blackwood</Heading>
+        <Text as="h6">Junior FullStack Developer</Text>
       </VStack>
       <Footer />
     </Grid>

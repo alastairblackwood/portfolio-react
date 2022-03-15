@@ -3,6 +3,7 @@ import {
   Button,
   FormControl,
   FormLabel,
+  Heading,
   Input,
   Spacer,
   VStack,
@@ -17,7 +18,9 @@ const ContactForm = () => {
       <Input id="email" type="email" />
       <FormLabel htmlFor="message">Message</FormLabel>
       <Input id="text" type="text" h={40} />
-      <Button mt={10}>Send</Button>
+      <Button mt={4} mb={4}>
+        Send
+      </Button>
     </FormControl>
   );
 };
