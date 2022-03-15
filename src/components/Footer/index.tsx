@@ -56,13 +56,13 @@ export default function Footer() {
       >
         <Stack direction={"row"} spacing={10} mb={4}>
           <SocialButton
-            label={"GitHub"}
+            label="GitHub"
             href={"https://github.com/alastairblackwood"}
           >
             <FaGithub size={"xl"} />
           </SocialButton>
           <SocialButton
-            label={"LinkedIn"}
+            label="LinkedIn"
             href={"https://www.linkedin.com/in/alastair-blackwood-1262888a/"}
           >
             <FaLinkedin size={"xl"} />

@@ -9,6 +9,15 @@ import {
   Box,
   useStyleConfig,
   Center,
+  useDisclosure,
+  Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
 } from "@chakra-ui/react";
 import { Logo } from "../Logo/Logo";
 
@@ -17,6 +26,9 @@ interface ICardProps {
 }
 
 export const AboutCard = (props: ICardProps) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const finalRef = React.useRef<HTMLDivElement>(null);
+
   const { ...rest } = props;
 
   const styles = useStyleConfig("Card");
@@ -24,10 +36,14 @@ export const AboutCard = (props: ICardProps) => {
   return (
     <Center py={8}>
       <Box
+        ref={finalRef}
+        tabIndex={-1}
+        aria-label="Focus moved to this box"
         __css={styles}
         {...rest}
-        maxW={"400px"}
-        w={"full"}
+        // maxW={"400px"}
+        h="60vmin"
+        w={[300, 400, 500, 600]}
         bg={useColorModeValue("white", "gray.800")}
         boxShadow={"2xl"}
         rounded={"md"}
@@ -37,13 +53,26 @@ export const AboutCard = (props: ICardProps) => {
         <Flex justify={"center"} mt={-12}>
           <Avatar
             size={"xl"}
+            mb={2}
             src="https://bit.ly/35ZmT2u"
             css={{
               border: "2px solid white",
             }}
           />
         </Flex>
-        <Box>{props.children}</Box>
+        <Button onClick={onOpen}>About</Button>
+        <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalCloseButton />
+            <ModalBody>{props.children}</ModalBody>
+            <ModalFooter>
+              <Button colorScheme="yellow.300" onClick={onClose}>
+                Close
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
       </Box>
     </Center>
   );
@@ -56,7 +85,7 @@ export const PortfolioCard = (props: ICardProps) => {
 
   return (
     <Flex>
-      <Box maxW="400px" w="full" __css={styles} {...rest}>
+      <Box w={[300, 400, 500, 600]} __css={styles} {...rest}>
         {props.children}
       </Box>
     </Flex>
@@ -70,7 +99,13 @@ export const ContactCard = (props: ICardProps) => {
 
   return (
     <Flex>
-      <Box mt={10} w="400px" height="389px" __css={styles} {...rest}>
+      <Box
+        mt={10}
+        w={[300, 400, 500, 600]}
+        height="389px"
+        __css={styles}
+        {...rest}
+      >
         {props.children}
       </Box>
     </Flex>
