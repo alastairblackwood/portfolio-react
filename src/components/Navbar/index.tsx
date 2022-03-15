@@ -68,8 +68,8 @@ const Navbar = () => {
       <Flex
         w="50vw"
         display={display}
-        bg="gray.800"
-        opacity={0.5}
+        bg="black.800"
+        opacity={0.7}
         rounded="lg"
         zIndex={20}
         h="50vh"
