@@ -44,7 +44,7 @@ const SocialButton = ({
 
 export default function Footer() {
   return (
-    <Box>
+    <Box mb={10}>
       <Container
         as={Stack}
         maxW={"6xl"}
