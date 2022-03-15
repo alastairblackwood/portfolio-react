@@ -34,26 +34,24 @@ export const AboutCard = (props: ICardProps) => {
   const styles = useStyleConfig("Card");
 
   return (
-    <Center py={8}>
+    <Center py={8} mt={10}>
       <Box
         ref={finalRef}
         tabIndex={-1}
         aria-label="Focus moved to this box"
         __css={styles}
         {...rest}
-        // maxW={"400px"}
-        h="60vmin"
         w={[300, 400, 500, 600]}
         bg={useColorModeValue("white", "gray.800")}
-        boxShadow={"2xl"}
+        boxShadow={"sm"}
         rounded={"md"}
         overflow={"hidden"}
       >
-        <Logo h={"120px"} w={"full"} />
+        <Logo h="120px" w="full" />
         <Flex justify={"center"} mt={-12}>
           <Avatar
             size={"xl"}
-            mb={2}
+            mb={4}
             src="https://bit.ly/35ZmT2u"
             css={{
               border: "2px solid white",
