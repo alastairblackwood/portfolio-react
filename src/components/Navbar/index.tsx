@@ -13,7 +13,14 @@ const Navbar = () => {
 
         <Flex display={["none", "none", "flex", "flex"]}>
           <Link href="/">
-            <Button as="a" variant="ghost" aria-label="Home" my={5} w="100%">
+            <Button
+              as="a"
+              variant="ghost"
+              aria-label="Home"
+              my={5}
+              w="100%"
+              color="yellow.300"
+            >
               Home
             </Button>
           </Link>
@@ -31,6 +38,7 @@ const Navbar = () => {
               aria-label="Portfolio"
               my={5}
               w="100%"
+              color="yellow.300"
             >
               Portfolio
             </Button>

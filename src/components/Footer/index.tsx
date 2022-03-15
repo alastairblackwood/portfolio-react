@@ -71,7 +71,12 @@ export default function Footer() {
             <FaTwitter size="50px" />
           </SocialButton>
         </Stack>
-        <Text color="yellow.300" fontSize="sm" fontWeight="semibold">
+        <Text
+          color="yellow.300"
+          fontSize="sm"
+          fontWeight="semibold"
+          textTransform="capitalize"
+        >
           © 2022 Alastair Blackwood. All rights reserved
         </Text>
       </Container>
