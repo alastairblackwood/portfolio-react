@@ -11,7 +11,7 @@ import theme from "../src/theme/Theme";
 ReactDOM.render(
   <ChakraProvider theme={theme}>
     <BrowserRouter>
-      <ColorModeScript />
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <App />
     </BrowserRouter>
   </ChakraProvider>,
