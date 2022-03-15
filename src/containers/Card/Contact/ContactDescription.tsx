@@ -9,6 +9,8 @@ import {
   Button,
   Spacer,
 } from "@chakra-ui/react";
+// import ThumbsUpIcon from '@material-ui/icons/ThumbUp';
+// import ThumbsDownIcon from '@material-ui/icons/ThumbDown';
 
 interface ICommentProps {
   name: string;
@@ -16,12 +18,16 @@ interface ICommentProps {
   description: string;
 }
 
-export const AboutDescription = (props: ICommentProps) => {
+export const ContactDescription = (props: ICommentProps) => {
+  const [isVoted, setIsVoted] = useState(false);
+  const [isUpVoted, setIsUpVoted] = useState(0);
+  const [isDownVoted, setIsDownVoted] = useState(0);
+
   return (
     <Box className="funding" p={4}>
       <Stack isInline align="baseline">
         <Text textTransform="uppercase" fontSize="sm" color="white.500">
-          Description
+          Funding Proposal
         </Text>
         <Spacer />
         <Badge
@@ -31,9 +37,7 @@ export const AboutDescription = (props: ICommentProps) => {
           letterSpacing="wide"
           rounded="lg"
           colorScheme="green"
-        >
-          {props.description}
-        </Badge>
+        ></Badge>
       </Stack>
       <Box className="proposal type">
         <Heading as="h2" fontWeight="semibold" fontSize="xl" my={2}></Heading>

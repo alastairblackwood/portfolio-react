@@ -42,12 +42,9 @@ const SocialButton = ({
   );
 };
 
-export default function SmallWithSocial() {
+export default function Footer() {
   return (
-    <Box
-    //   bg={useColorModeValue("gray.50", "gray.900")}
-    //   color={useColorModeValue("gray.700", "gray.200")}
-    >
+    <Box>
       <Container
         as={Stack}
         maxW={"6xl"}
@@ -62,16 +59,16 @@ export default function SmallWithSocial() {
             label={"GitHub"}
             href={"https://github.com/alastairblackwood"}
           >
-            <FaGithub />
+            <FaGithub size={"xl"} />
           </SocialButton>
           <SocialButton
             label={"LinkedIn"}
             href={"https://www.linkedin.com/in/alastair-blackwood-1262888a/"}
           >
-            <FaLinkedin />
+            <FaLinkedin size={"xl"} />
           </SocialButton>
           <SocialButton label={"Twitter"} href={"#"}>
-            <FaTwitter />
+            <FaTwitter size={"xl"} />
           </SocialButton>
         </Stack>
         <Text color="yellow.300" fontSize="sm" fontWeight="semibold">

@@ -2,14 +2,13 @@ import React from "react";
 import {
   Heading,
   Avatar,
-  Box,
-  Center,
-  Image,
-  Flex,
   Text,
   Stack,
-  Button,
   useColorModeValue,
+  Flex,
+  Box,
+  useStyleConfig,
+  Center,
 } from "@chakra-ui/react";
 import { Logo } from "../Logo/Logo";
 
@@ -18,10 +17,16 @@ interface ICardProps {
 }
 
 export const AboutCard = (props: ICardProps) => {
+  const { ...rest } = props;
+
+  const styles = useStyleConfig("Card");
+
   return (
-    <Center py={6}>
+    <Center py={8}>
       <Box
-        maxW={"270px"}
+        __css={styles}
+        {...rest}
+        maxW={"400px"}
         w={"full"}
         bg={useColorModeValue("white", "gray.800")}
         boxShadow={"2xl"}
@@ -32,38 +37,42 @@ export const AboutCard = (props: ICardProps) => {
         <Flex justify={"center"} mt={-12}>
           <Avatar
             size={"xl"}
-            src={"https://bit.ly/35ZmT2u"}
+            src="https://bit.ly/35ZmT2u"
             css={{
               border: "2px solid white",
             }}
           />
         </Flex>
-
-        <Box p={6}>
-          <Stack spacing={0} align={"center"} mb={5}>
-            <Heading fontSize={"2xl"} fontWeight={500} fontFamily={"body"}>
-              Alastair Blackwood
-            </Heading>
-            <Text color={"gray.500"}>FullStack Developer</Text>
-          </Stack>
-
-          <Stack direction={"row"} justify={"center"} spacing={6}>
-            <Stack spacing={0} align={"center"}>
-              <Text fontSize="sm">
-                Emerging junior software engineer with a passion for React,
-                JavaScript, NodeJS and a keen interest in the Bitcoin Lightning
-                network. Highly skilled in designing, implementing and
-                installing software solutions across the complete development
-                life cycle of a product. Adept at developing various tools &
-                applications by producing clean and efficient code including
-                integration testing. Skilled in React, JavaScript, NodeJS,
-                Typescript, Ruby, Ruby-on-Rails, MongoDB, Mongoose, Express,
-                HTML & CSS.
-              </Text>
-            </Stack>
-          </Stack>
-        </Box>
+        <Box>{props.children}</Box>
       </Box>
     </Center>
+  );
+};
+
+export const PortfolioCard = (props: ICardProps) => {
+  const { ...rest } = props;
+
+  const styles = useStyleConfig("Card");
+
+  return (
+    <Flex>
+      <Box maxW="400px" w="full" __css={styles} {...rest}>
+        {props.children}
+      </Box>
+    </Flex>
+  );
+};
+
+export const ContactCard = (props: ICardProps) => {
+  const { ...rest } = props;
+
+  const styles = useStyleConfig("Card");
+
+  return (
+    <Flex>
+      <Box w="400px" height="389px" __css={styles} {...rest}>
+        {props.children}
+      </Box>
+    </Flex>
   );
 };

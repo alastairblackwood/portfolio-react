@@ -21,7 +21,7 @@ const Navbar = () => {
         </Box>
         <Box mr={4}>
           <Heading>
-            <Link href="/about" color="yellow.300" fontSize="lg">
+            <Link href="/portfolio" color="yellow.300" fontSize="lg">
               Portfolio
             </Link>
           </Heading>

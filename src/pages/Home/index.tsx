@@ -3,6 +3,7 @@ import { Box, Text, Link, VStack, Code, Grid, Heading } from "@chakra-ui/react";
 import { Logo } from "../../containers/Logo/Logo";
 import Navbar from "../../components/Navbar";
 import SmallWithSocial from "../../components/Footer";
+import Footer from "../../components/Footer";
 
 export const Home = () => (
   <Box textAlign="center" fontSize="xl">
@@ -14,7 +15,7 @@ export const Home = () => (
         <Heading>Alastair Blackwood</Heading>
         <Text as="h6">Junior FullStack Developer</Text>
       </VStack>
-      <SmallWithSocial />
+      <Footer />
     </Grid>
   </Box>
 );
