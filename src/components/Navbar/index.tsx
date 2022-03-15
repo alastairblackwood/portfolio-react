@@ -66,17 +66,20 @@ const Navbar = () => {
 
       {/* Mobile Content */}
       <Flex
-        w="50vw"
         display={display}
-        bg="black.800"
-        opacity={0.7}
+        w="52vw"
+        h="47vh"
+        top="0"
+        justifyContent="center"
+        mt={5}
+        ml={2}
+        pr={8}
+        bg="black"
+        opacity={0.9}
         rounded="lg"
         zIndex={20}
-        h="50vh"
         pos="fixed"
-        top="0"
-        mt={5}
-        left="25%"
+        left="22%"
         overflowY="auto"
         flexDir="row"
       >
