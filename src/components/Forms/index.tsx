@@ -19,7 +19,12 @@ export const ContactForm = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("gmail", "template_sexuxlg", e.target, "20mleEMlRerUmg9wu")
+      .sendForm(
+        "service_oigunbg",
+        "template_sexuxlg",
+        e.target,
+        "20mleEMlRerUmg9wu"
+      )
       .then(
         (result: EmailJSResponseStatus) => {
           console.log(result.text);
@@ -37,14 +42,14 @@ export const ContactForm = () => {
         <FormControl isRequired>
           <FormLabel
             className="name"
-            htmlFor="name"
+            htmlFor="from_name"
             color="yellow.300"
             fontWeight="semibold"
             placeholder="Name"
           >
             Name
           </FormLabel>
-          <Input id="name" type="text" />
+          <Input type="text" name="name" />
           <FormLabel
             className="email"
             htmlFor="email"
@@ -54,7 +59,7 @@ export const ContactForm = () => {
           >
             Email
           </FormLabel>
-          <Input id="message" type="text" />
+          <Input type="email" name="email" />
           <FormLabel
             className="message"
             htmlFor="message"
@@ -64,8 +69,8 @@ export const ContactForm = () => {
           >
             Message
           </FormLabel>
-          <Input id="text" type="text" h={40} />
-          <Button type="submit" value="Send Message" mt={4} mb={4}>
+          <Input type="text" name="message" h={40} />
+          <Button type="submit" value="Send" mt={4} mb={4}>
             Send
           </Button>
         </FormControl>
