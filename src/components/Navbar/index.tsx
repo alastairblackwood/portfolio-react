@@ -64,7 +64,7 @@ const Navbar = () => {
         <ColorModeSwitcher justifySelf="flex-end" />
       </Flex>
 
-      {/* Mobile Content */}
+      {/* Mobile Content - Dropdown from hamburger menu */}
       <Flex
         display={display}
         w="52vw"

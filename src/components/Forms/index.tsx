@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import {
   Button,
@@ -10,30 +10,62 @@ import {
   Spacer,
   VStack,
 } from "@chakra-ui/react";
+import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 
-const ContactForm = () => {
-  const { handleSubmit, watch } = useForm();
+export const ContactForm = () => {
+  const { handleSubmit } = useForm();
 
-  const onSubmit = (data: any) => {
-    if (!data.email || !data.message) {
-      return "Please enter your email and message";
-    }
-    console.log(data);
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("gmail", "template_sexuxlg", e.target, "20mleEMlRerUmg9wu")
+      .then(
+        (result: EmailJSResponseStatus) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
   };
 
   return (
     <Flex mt={24}>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={sendEmail}>
         <FormControl isRequired>
-          <FormLabel htmlFor="email" color="yellow.300" fontWeight="semibold">
+          <FormLabel
+            className="name"
+            htmlFor="name"
+            color="yellow.300"
+            fontWeight="semibold"
+            placeholder="Name"
+          >
+            Name
+          </FormLabel>
+          <Input id="name" type="text" />
+          <FormLabel
+            className="email"
+            htmlFor="email"
+            color="yellow.300"
+            fontWeight="semibold"
+            placeholder="Email"
+          >
             Email
           </FormLabel>
-          <Input id="email" type="email" />
-          <FormLabel htmlFor="message" color="yellow.300" fontWeight="semibold">
+          <Input id="message" type="text" />
+          <FormLabel
+            className="message"
+            htmlFor="message"
+            color="yellow.300"
+            fontWeight="semibold"
+            placeholder="Enter short message here"
+          >
             Message
           </FormLabel>
           <Input id="text" type="text" h={40} />
-          <Button type="submit" mt={4} mb={4}>
+          <Button type="submit" value="Send Message" mt={4} mb={4}>
             Send
           </Button>
         </FormControl>

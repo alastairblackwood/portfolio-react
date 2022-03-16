@@ -16,8 +16,6 @@ export const Contact = () => (
         <Box mt={10}>
           <ContactForm />
         </Box>
-        <Heading>Alastair Blackwood</Heading>
-        <Text as="h6">Junior FullStack Developer</Text>
       </VStack>
     </Grid>
     <Footer />
