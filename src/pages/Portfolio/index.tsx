@@ -7,14 +7,7 @@ import { PortfolioCard } from "../../containers/Card";
 import { PortfolioDescription } from "../../containers/Card/Portfolio/PortfolioDescription";
 
 export const Portfolio = () => (
-  <Flex
-    justifyContent="center"
-    minH="100vh"
-    maxW="1200px"
-    margin="0 auto"
-    w="100%"
-    p={3}
-  >
+  <Flex justifyContent="center" maxW="1200px" margin="0 auto" w="100%" p={3}>
     <VStack spacing={8}>
       <Heading color="yellow.300" size="lg" mt={16}>
         Portfolio

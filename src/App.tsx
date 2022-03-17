@@ -10,7 +10,7 @@ import { Portfolio } from "./pages/Portfolio";
 const App = () => {
   return (
     <>
-      <Flex minHeight="calc(100vh - 34px)">
+      <Flex minHeight="calc(100vh - 157px)">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

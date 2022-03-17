@@ -8,14 +8,7 @@ import { ContactDescription } from "../../containers/Card/Contact/ContactDescrip
 import ContactForm from "../../components/Forms";
 
 export const Contact = () => (
-  <Flex
-    justifyContent="center"
-    minH="100vh"
-    maxW="1200px"
-    margin="0 auto"
-    w="100%"
-    p={3}
-  >
+  <Flex justifyContent="center" maxW="1200px" margin="0 auto" w="100%" p={3}>
     <VStack spacing={2}>
       <Heading size="md" textTransform="capitalize"></Heading>
       <Box mt={10}>

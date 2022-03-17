@@ -9,14 +9,7 @@ interface AboutProps {
 
 export const About = ({ children }: AboutProps) => {
   return (
-    <Flex
-      justifyContent="center"
-      minH="100vh"
-      maxW="1200px"
-      margin="0 auto"
-      w="100%"
-      p={3}
-    >
+    <Flex justifyContent="center" maxW="1200px" margin="0 auto" w="100%" p={3}>
       <VStack mt={4}>
         <AboutCard>
           <AboutDescription
