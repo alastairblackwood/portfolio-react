@@ -58,7 +58,8 @@ export const AboutCard = (props: ICardProps) => {
             }}
           />
         </Flex>
-        <Button onClick={onOpen}>About</Button>
+        <Flex>{props.children}</Flex>
+        {/* <Button onClick={onOpen}>About</Button>
         <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
           <ModalContent>
@@ -70,7 +71,7 @@ export const AboutCard = (props: ICardProps) => {
               </Button>
             </ModalFooter>
           </ModalContent>
-        </Modal>
+        </Modal> */}
       </Box>
     </Center>
   );

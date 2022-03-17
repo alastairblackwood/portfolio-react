@@ -21,12 +21,10 @@ export const About = ({ children }: AboutProps) => {
               name={""}
               role={""}
               description={
-                "Hi, my name is Alastair and I'm an emerging junior software engineer with a passion for React, JavaScript, NodeJS and a keen interest in the Bitcoin Lightning network. Highly skilled in designing, implementing and installing software solutions across the complete development life cycle of a product. Adept at developing various tools &applications by producing clean and efficient code including integration testing. Skilled in React, JavaScript, NodeJS, Typescript, Ruby, Ruby-on-Rails, MongoDB, Mongoose, Express, HTML & CSS."
+                "Hi, my name is Alastair and I'm an emerging junior software engineer with a passion for React, JavaScript, NodeJS and a keen interest in the Bitcoin Lightning network. I'm skilled in designing, implementing and installing software solutions across the complete development life cycle of a product."
               }
             />
           </AboutCard>
-          <Heading>Alastair Blackwood</Heading>
-          <Text as="h6">Junior FullStack Developer</Text>
         </VStack>
       </Grid>
       <Footer />
