@@ -12,7 +12,7 @@ export const Home = () => (
     p={3}
   >
     <VStack spacing={2}>
-      <Logo h="60vmin" pointerEvents="none" mb={4} p={6} />
+      <Logo pointerEvents="none" mt={20} mb={4} p={6} />
 
       <Heading>Alastair Blackwood</Heading>
       <Text as="h6">Junior FullStack Developer</Text>
