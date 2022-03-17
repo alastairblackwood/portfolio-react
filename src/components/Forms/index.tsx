@@ -1,30 +1,21 @@
 import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
-import { Button, Flex, FormControl, FormLabel, Input } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  FormControl,
+  FormLabel,
+  Input,
+} from "@chakra-ui/react";
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 import Reaptcha from "reaptcha";
 
-interface ReCaptchaInstance {
-  ready: (cb: () => any) => void;
-  execute: (options: ReCaptchaExecuteOptions) => Promise<string>;
-  render: (id: string, options: ReCaptchaRenderOptions) => any;
-}
-
-interface ReCaptchaExecuteOptions {
-  action: string;
-  callback: (token: string) => void;
-  "expired-callback": () => void;
-  "error-callback": () => void;
-}
-
-interface ReCaptchaRenderOptions {
-  sitekey: string;
-  size: "invisible";
-}
+const siteKey = `${process.env.REACT_APP_RECAPTCHA_SITE_KEY}`;
 
 export const ContactForm = () => {
   const [verified, setVerified] = useState(false);
-  const { handleSubmit, formState } = useForm<ReCaptchaInstance>({
+  const { handleSubmit, formState } = useForm({
     mode: "onBlur",
   });
 
@@ -87,15 +78,11 @@ export const ContactForm = () => {
             Message
           </FormLabel>
           <Input type="text" name="message" h={40} />
-          {/* <Reaptcha
-            siteKey={process.env.REACT_APP_RECAPTCHA_PUBLIC_KEY}
-            onVerify={onVerify}
-          /> */}
-
-          <Button type="submit" value="Send" disabled={!verified} mt={4} mb={4}>
+          <Button type="submit" value="Send" mt={4} mb={4}>
             Submit
           </Button>
         </FormControl>
+        {/* <Reaptcha siteKey={siteKey} onVerify={onVerify} /> */}
       </form>
     </Flex>
   );
