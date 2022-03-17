@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import {
   Box,
   Button,
+  Center,
   Flex,
   FormControl,
   FormLabel,
@@ -78,6 +79,7 @@ export const ContactForm = () => {
             Message
           </FormLabel>
           <Input type="text" name="message" h={40} />
+
           <Button type="submit" value="Send" mt={4} mb={4}>
             Submit
           </Button>

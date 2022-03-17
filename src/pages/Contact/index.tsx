@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Text, Link, VStack, Code, Grid, Heading } from "@chakra-ui/react";
+import { Box, VStack, Heading, Flex } from "@chakra-ui/react";
 import { Logo } from "../../containers/Logo/Logo";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -8,16 +8,19 @@ import { ContactDescription } from "../../containers/Card/Contact/ContactDescrip
 import ContactForm from "../../components/Forms";
 
 export const Contact = () => (
-  <Box textAlign="center" fontSize="xl">
-    <Navbar />
-    <Grid minH="100vh" maxW="1200px" margin="0 auto" w="100%" p={3}>
-      <VStack spacing={2}>
-        <Heading size="md" textTransform="capitalize"></Heading>
-        <Box mt={10}>
-          <ContactForm />
-        </Box>
-      </VStack>
-    </Grid>
-    <Footer />
-  </Box>
+  <Flex
+    justifyContent="center"
+    minH="100vh"
+    maxW="1200px"
+    margin="0 auto"
+    w="100%"
+    p={3}
+  >
+    <VStack spacing={2}>
+      <Heading size="md" textTransform="capitalize"></Heading>
+      <Box mt={10}>
+        <ContactForm />
+      </Box>
+    </VStack>
+  </Flex>
 );

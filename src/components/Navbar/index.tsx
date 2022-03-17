@@ -1,10 +1,22 @@
-import { useState } from "react";
-import { Box, Flex, Link, Button, IconButton, Switch } from "@chakra-ui/react";
+import { useState, useRef } from "react";
+import {
+  Flex,
+  Link,
+  Button,
+  IconButton,
+  useDisclosure,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+} from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { ColorModeSwitcher } from "../../ColorModeSwitcher";
 
 const Navbar = () => {
   const [display, setDisplay] = useState("none");
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = useRef();
 
   return (
     <Flex>
@@ -12,7 +24,7 @@ const Navbar = () => {
         {/* Desktop */}
 
         <Flex display={["none", "none", "flex", "flex"]}>
-          <Link href="/">
+          <Link href="/" style={{ textDecoration: "none" }}>
             <Button
               as="a"
               variant="ghost"
@@ -25,7 +37,7 @@ const Navbar = () => {
             </Button>
           </Link>
 
-          <Link href="/about">
+          <Link href="/about" style={{ textDecoration: "none" }}>
             <Button as="a" variant="ghost" aria-label="About" my={5} w="100%">
               About
             </Button>
@@ -44,7 +56,7 @@ const Navbar = () => {
             </Button>
           </Link>
 
-          <Link href="/contact">
+          <Link href="/contact" style={{ textDecoration: "none" }}>
             <Button as="a" variant="ghost" aria-label="Contact" my={5} w="100%">
               Contact
             </Button>
@@ -61,6 +73,10 @@ const Navbar = () => {
           onClick={() => setDisplay("flex")}
           display={["flex", "flex", "none", "none"]}
         />
+        {/* <Drawer isOpen={isOpen} placement='right' onClose={onClose} finalFocusRef={btnRef}>
+          <DrawerOverlay />
+          <DrawerContent> */}
+
         <ColorModeSwitcher justifySelf="flex-end" />
       </Flex>
 
@@ -95,19 +111,19 @@ const Navbar = () => {
         </Flex>
 
         <Flex flexDir="column" align="center">
-          <Link href="/">
+          <Link href="/" style={{ textDecoration: "none" }}>
             <Button as="a" variant="ghost" aria-label="Home" my={5} w="100%">
               Home
             </Button>
           </Link>
 
-          <Link href="/about">
+          <Link href="/about" style={{ textDecoration: "none" }}>
             <Button as="a" variant="ghost" aria-label="About" my={5} w="100%">
               About
             </Button>
           </Link>
 
-          <Link href="/portfolio">
+          <Link href="/portfolio" style={{ textDecoration: "none" }}>
             <Button
               as="a"
               variant="ghost"
@@ -119,12 +135,16 @@ const Navbar = () => {
             </Button>
           </Link>
 
-          <Link href="/contact">
+          <Link href="/contact" style={{ textDecoration: "none" }}>
             <Button as="a" variant="ghost" aria-label="Contact" my={5} w="100%">
               Contact
             </Button>
           </Link>
         </Flex>
+        {/* <DrawerCloseButton />
+        </DrawerContent>
+        
+        </Drawer> */}
       </Flex>
     </Flex>
   );
